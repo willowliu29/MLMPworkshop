@@ -1,25 +1,25 @@
-#Project
+# Project
 Repository:http://github.com/depthAnything/Depth-Anything-v2
 Inference task: Depth Anything V2 
 
-#Repo map
+# Repo map
 Environment: requirements.txt
 Entry point: run.py
 Model: The run.py automatically downloads models from the "checkpoints" directory.
 Input: /home/s5728939/Pictures/forest.jpeg
 Output: outputs/
 
-#Environment setup
+# Environment setup
 **Note for users:**If you encounter'No module named pip',please run 'python3 -m ensurepip --upgrade' first to install pip.
 1.git clone https://github.com/DepthAnything/Depth-Anything-V2 
 2.cd Depth-Anything-V2
 3.mkdir checkpoints
 4.python3 -m pip install -r requirements.txt
 
-#Inference
+# Inference
 python3 run.py --encoder vits --img-path /home/s5728939/Pictures/forest.jpeg --outdir ./outputs
 
-#One real failure
+# One real failure
 Category: File structure
 Root cause: The core code folder 'depth_anything_v2' was accidentally nested inside the 'checkpoints'folder,causing a 'ModuleNotFoundError'.
 
